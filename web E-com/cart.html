@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Cart | VK Sounds</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  font-family:Poppins,sans-serif;
+  background:#f5f5f5;
+}
+.cart{
+  max-width:900px;
+  margin:40px auto;
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+}
+.cart-item{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  border-bottom:1px solid #ddd;
+  padding:15px 0;
+}
+.cart-item img{
+  width:100px;
+}
+.remove-btn{
+  background:red;
+  color:#fff;
+  border:none;
+  padding:6px 12px;
+  cursor:pointer;
+  border-radius:4px;
+}
+.total{
+  text-align:right;
+  font-size:20px;
+  margin-top:20px;
+}
+.empty{
+  text-align:center;
+  color:#777;
+}
+</style>
+</head>
+
+<body>
+
+<div class="cart">
+  <h2>Your Cart</h2>
+  <div id="cartItems"></div>
+  <div class="total" id="total"></div>
+</div>
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cartItems = document.getElementById("cartItems");
+let totalBox = document.getElementById("total");
+
+function renderCart(){
+  cartItems.innerHTML = "";
+  let total = 0;
+
+  if(cart.length === 0){
+    cartItems.innerHTML = "<p class='empty'>Your cart is empty 🛒</p>";
+    totalBox.innerHTML = "";
+    return;
+  }
+
+  cart.forEach((item,index)=>{
+    total += item.price * item.qty;
+
+    cartItems.innerHTML += `
+      <div class="cart-item">
+        <img src="${item.image}">
+        <div>
+          <h4>${item.name}</h4>
+          <p>₹${item.price}</p>
+          <p>Quantity: ${item.qty}</p>
+          <button class="remove-btn" onclick="removeItem(${index})">
+            Remove
+          </button>
+        </div>
+      </div>
+    `;
+  });
+
+  totalBox.innerHTML = "Total: ₹ " + total;
+}
+
+function removeItem(index){
+  cart.splice(index,1);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  renderCart();
+}
+
+renderCart();
+</script>
+
+
+</body>
+</html>

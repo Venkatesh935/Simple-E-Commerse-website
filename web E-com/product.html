@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Product Details | VK Sounds</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:Poppins;background:#f5f5f5}
+.product{
+  max-width:900px;
+  margin:50px auto;
+  background:#fff;
+  padding:25px;
+  border-radius:10px;
+  display:flex;
+  gap:30px;
+}
+.product img{width:300px}
+.btn{
+  background:orange;
+  padding:10px 25px;
+  border:none;
+  cursor:pointer;
+  border-radius:30px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="product">
+  <img id="pimg">
+  <div>
+    <h2 id="pname"></h2>
+    <h3 id="pprice"></h3>
+    <p>Professional DJ & Event sound equipment</p>
+
+    <button class="btn" onclick="addToCart()">Add To Cart</button>
+    <button class="btn" onclick="bookConcert()">Book Concert</button>
+  </div>
+</div>
+
+<script>
+let params = new URLSearchParams(window.location.search);
+
+let name  = params.get("name");
+let price = params.get("price");
+let img   = params.get("img");
+
+document.getElementById("pname").innerText = name;
+document.getElementById("pprice").innerText = "₹" + price;
+document.getElementById("pimg").src = img;
+
+function addToCart(){
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let found = cart.find(p => p.name === name);
+
+  if(found){
+    found.qty += 1;
+  }else{
+    cart.push({name,price, image:img, qty:1});
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert("Added to cart ✅");
+}
+
+function bookConcert(){
+  window.location.href ="booking.html?product=" + encodeURIComponent(name);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register | VK Sounds</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:Poppins;background:#f5f5f5}
+.box{
+  width:350px;margin:80px auto;background:#fff;
+  padding:25px;border-radius:10px
+}
+input,button{
+  width:100%;padding:10px;margin:10px 0
+}
+button{background:#000;color:#fff;border:none;cursor:pointer}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<h2>Create Account</h2>
+<input type="text" id="name" placeholder="Full Name">
+<input type="email" id="email" placeholder="Email">
+<input type="password" id="password" placeholder="Password">
+<button onclick="register()">Register</button>
+<p>Already have account? <a href="login.html">Login</a></p>
+</div>
+
+<script>
+function register(){
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+
+  if(!name || !email || !password){
+    alert("All fields required");
+    return;
+  }
+
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+
+  if(users.find(u => u.email === email)){
+    alert("Email already registered");
+    return;
+  }
+
+  users.push({name,email,password});
+  localStorage.setItem("users", JSON.stringify(users));
+  alert("Registration successful ✅");
+  window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

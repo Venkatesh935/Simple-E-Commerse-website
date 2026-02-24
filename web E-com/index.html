@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>VK Sounds | DJ & Event Sound Systems</title>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body> 
+<div class="hader"id="#home">
+   <div class="container">
+        <div class="navbar">
+             <div class="logo"><img src="images/Screenshot 2025-12-25 180631.png" width="80px"></div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#product">PRODUCTS</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="#contect">CONTACT</a></li>
+                    <li id="loginLink"><a href="login.html">LOGIN</a></li>
+                    <li id="logoutLink" style="display:none"><a href="#" onclick="logout()">LOGOUT</a></li>
+                </ul>
+            </nav>          
+            <a href="cart.html" class="cart-icon">
+            <img src="images/shopping_.png" width="30px" height="30px">
+            <span id="cartCount">0</span></a>
+            <img src="images/MENUE.png" class="menue-icon" onclick="menuetoggle()">          
+        </div>
+        <div class="row">
+                <div class="col-2"> 
+                      <h1><span>VK</span> Sounds<br>Decorations</h1>
+                      <p>Any Marriage private Malls College events</p>
+                      <a href=""class="btn">Explore Now &#8594;</a>
+                </div>   
+                <div class="col-2"><img src="images/Gemini_Generated_Image_h2uoaih2uoaih2uo-removebg-preview.png"></div>
+        </div>
+    </div>
+    
+    <!----------------categories--------->
+    <div class="categaries">
+        <div class="small-container"> 
+            <div class="row"><div class="col-3"><img src="images/dj-is-standing-.jpg" alt="">DJ CONCERT</div> 
+                 <div class="col-3"><img src="images/indian-dj-playing.jpg" alt="">MARRAGE </div>       
+                 <div class="col-3"><img src="images/india reod show.png" alt="">OTHERS</div>                  
+    </div>
+</div>
+<!----------featuredproduct------------->
+<div class="small-container" id="product">
+     <h2 class="title">Feature Products</h2>
+     <div class="row">
+        <div class="col-4">
+            <img src="images/CROWN-AMP.jpg">
+            <h4>CROWN AMP</h4> 
+            <div class="rateing">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>95000₹</p> 
+<div class="product-buttons">
+  <button class="btn"
+    onclick="addToCart('CROWN SUB AMP',95000,'images/CROWN-AMP.jpg')">
+    Add To Cart
+  </button>
+
+  <a href="product.html?name=CROWN AMP&price=95000&img=images/CROWN-AMP.jpg"
+     class="btn outline">
+     View Details
+  </a>
+</div>
+
+
+        </div>
+        <div class="col-4"id="#product">
+            <img src="images/SM-AMP.jpg">
+            <h4>STDIO MASTER</h4> 
+            <div class="rateing">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+             <p>95000₹</p> 
+            <div class="product-buttons">
+  <button class="btn"
+    onclick="addToCart('CROWN SUB AMP',95000,'images/SM-AMP.jpg')">
+    Add To Cart
+  </button>
+
+  <a href="product.html?name=STDIO MASTER&price=95000&img=images/SM-AMP.jpg"
+     class="btn outline">
+     View Details
+  </a>
+</div>
+
+        </div>
+        <div class="col-4">
+            <img src="images/ad9000-amplifier.jpg">
+            <h4>AUDIO TONE</h4> 
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+             <p>95000₹</p> 
+             <div class="product-buttons">
+  <button class="btn"
+    onclick="addToCart('AUDIO TONE',95000,'images/ad9000-amplifier.jpg')">
+    Add To Cart
+  </button>
+
+  <a href="product.html?name=AUDIO TONE&price=95000&img=images/ad9000-amplifier.jpg"
+     class="btn outline">
+     View Details
+  </a>
+</div>
+
+        </div>
+        <div class="col-4">
+            <img src="images/zyper.jpg">
+            <h4>Zyper sub Amp</h4> 
+            <div class="rateing">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+             <p>95000₹</p> 
+             <div class="product-buttons">
+  <button class="btn"
+    onclick="addToCart('Zyper',95000,'images/zyper.jpg')">
+    Add To Cart
+  </button>
+
+  <a href="product.html?name=Zyper&price=95000&img=images/zyper.jpg"
+     class="btn outline">
+     View Details
+  </a>
+</div>
+
+        </div>
+    </div>
+     <div class="row">
+        <div class="col-4">
+            <img src="images/light1.jpg">
+            <h4>Disco Light</h4> 
+            <div class="rateing">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+             <p>95000₹</p> 
+             <div class="product-buttons">
+  <button class="btn"
+    onclick="addToCart('Disco light',95000,'images/light1.jpg')">
+    Add To Cart
+  </button>
+
+  <a href="product.html?name=Disco light&price=95000&img=images/light1.jpg"
+     class="btn outline">
+     View Details
+  </a>
+</div>
+
+        </div>
+        <div class="col-4">
+            <img src="images/light2.jpg">
+            <h4>Dico RGB Light</h4> 
+            <div class="rateing">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+             <p>95000₹</p> 
+                           <div class="product-buttons">
+  <button class="btn"
+    onclick="addToCart('Dico RGB Light',95000,'images/light2.jpg')">
+    Add To Cart
+  </button>
+
+  <a href="product.html?name=Dico RGB Light&price=95000&img=images/light2.jpg"
+     class="btn outline">
+     View Details
+  </a>
+</div>
+
+
+
+        </div><div class="col-4">
+            <img src="images/light3.jpg">
+            <h4>Sharpy light</h4> 
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+             <p>95000₹</p> 
+              <div class="product-buttons">
+  <button class="btn"
+    onclick="addToCart('Sharpy Light',95000,'images/light3.jpg')">
+    Add To Cart
+  </button>
+
+  <a href="product.html?name=Sharpy light&price=95000&img=images/light3.jpg"
+     class="btn outline">
+     View Details
+  </a>
+</div>
+
+        </div>
+        <div class="col-4">
+            <img src="images/Clay-Paky-Moving-Lights.jpg">
+            <h4>Clay Paky Moving Lights</h4> 
+            <div class="rateing">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+             <p>95000₹</p> 
+           <div class="product-buttons">
+  <button class="btn"
+    onclick="addToCart('Clay-Paky-Moving-Lights',95000,'images/Clay-Paky-Moving-Lights.jpg')">
+    Add To Cart
+  </button>
+
+  <a href="product.html?name=Clay-Paky-Moving-Lights&price=95000&img=images/Clay-Paky-Moving-Lights.jpg"
+     class="btn outline">
+     View Details
+  </a>
+</div>
+
+
+        </div>
+    </div>
+     <div class="row">
+        <div class="col-4">
+            <img src="images/combo dj Sound .jpeg"width="50px">
+            <h4>JCOmbo Top Speaker</h4> 
+            <div class="rateing">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+             <p>95000₹</p> 
+           <div class="product-buttons">
+  <button class="btn"
+    onclick="addToCart('CROWN SUB AMP',95000,'images/combo dj Sound .jpeg')">
+    Add To Cart
+  </button>
+
+  <a href="product.html?name=Combo pack&price=95000&img=images/combo dj Sound .jpeg  "
+     class="btn outline">
+     View Details
+  </a>
+</div>
+
+        </div>
+        <div class="col-4">
+            <img src="images/spks2.jpg">
+            <h4>Ahuja Top Speaker</h4> 
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+             <p>95000₹</p> 
+            <div class="product-buttons">
+  <button class="btn"
+    onclick="addToCart('Ahuja Top Speaker',95000,'images/spks2.jpg')">
+    Add To Cart
+  </button>
+
+  <a href="product.html?name=Ahuja Top Speaker&price=95000&img=images/spks2.jpg"
+     class="btn outline">
+     View Details
+  </a>
+</div>
+
+        </div><div class="col-4">
+            <img src="images/AHUJA-TOP-2.jpg">
+            <h4>JBL bass -subwoffer</h4> 
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+             <p>95000₹</p> 
+            <div class="product-buttons">
+  <button class="btn"
+    onclick="addToCart('JBL bass -subwoffer',95000,'images/AHUJA-TOP-2.jpg')">
+    Add To Cart
+  </button>
+
+  <a href="product.html?name=JBL bass -subwoffer&price=95000&img=images/AHUJA-TOP-2.jpg"
+     class="btn outline">
+     View Details
+  </a>
+</div>
+
+        </div>
+        <div class="col-4">
+            <img src="images/BJL-SUB.jpg">
+            <h4>JBL bass -subwoofer</h4> 
+            <div class="rateing">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                
+            </div>
+             <p>95000₹</p> 
+         <div class="product-buttons">
+  <button class="btn"
+    onclick="addToCart('JBL bass -subwoofer',95000,'images/BJL-SUB.jpg')">
+    Add To Cart
+  </button>
+
+  <a href="product.html?name=JBL bass -subwoofer&price=95000&img=images/BJL-SUB.jpg"
+     class="btn outline">
+     View Details
+  </a>
+</div>
+     </div>
+    </div> 
+       
+ </div>
+<!----------------offer--------->
+     <div class="offer">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <img src="images/AHUJA-TOP.png" class="offer-img" id="ahuja">
+                </div>
+                <div class="col-2">
+                    <p>Exclusively New Products</p>
+                    <h1>AHUJA SPEAKER</h1>
+                    <small>PROFESSIONAL DJ SOUND SYSTEM</small>
+                    <BR>
+                        <button class="btn" onclick="addToCart('JBL Bass Subwoofer',95000,'images/BJL-SUB.jpg')">BUY NOW &#8594;</button>
+                </div>
+            </div>
+        </div>
+     </div>
+</div>
+<!-----testimonoal----->
+<div class="testimonoal">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-3">
+                <p>ksewdfgfwihfpwOHFOSAISCJS;LJ</p>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <img src="images/AHUJA-SUB.jpg" alt="">
+                <h3>ahuja subwoffer</h3>
+            </div>
+          <div class="col-3">
+                <p>ksewdfgfwihfpwOHFOSAISCJS;LJ</p>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <img src="images/AHUJA-SUB.jpg" alt="">
+                <h3>ahuja subwoffer</h3>
+            </div>
+            <div class="col-3">
+                <p>ksewdfgfwihfpwOHFOSAISCJS;LJ</p> 
+                
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <img src="images/AHUJA-SUB.jpg" alt="">
+                <h3>ahuja subwoffer</h3>   
+            </div>
+        </div>
+    </div>
+</div>
+<!--brands-->
+<div class="brands">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-5">
+                <img src="images/JBL.png" alt="">
+            </div>
+            <div class="col-5">
+                <img src="images/SM.jpg.webp" alt="">
+            </div>
+            <div class="col-5">
+                <img src="images/AHUJA-SUB.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!--features-->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download our app</h3>
+                <p>Available for android and ios</p>
+                
+                <div class="app-logo">
+  <i class="fa-brands fa-android fa-flip"></i>
+<i class="fa-brands fa-apple fa-flip"></i>
+</div>
+
+             </div> 
+             <img src="images/Screenshot 2025-11-29 231805.png" alt=""width="40px">   
+             <div class="footer-col-2">
+                <p>Available for Android and ios</p>
+             </div>  
+             <div class="footer-col-3">
+                <h3>USEFUL LINKS</h3>
+                <ul>
+                    <li><a href=""style="text-decoration:none; color:white; font-family:Poppins, sans-serif;"> 1. Coupons</a></li>
+                    <li><a href="#ahuja"style="text-decoration:none; color:white; font-family:Poppins, sans-serif;">2. Offers</a></li>
+                    <li><a href=""style="text-decoration:none; color:white; font-family:Poppins, sans-serif;">3. Return Policy</a></li>
+                    <li><a href="cart.html"style="text-decoration:none; color:white; font-family:Poppins, sans-serif;">4. Booking</a></li>
+                </ul>          
+        </div>
+            <div class="footer-col-4"id="contact">
+                <h3>SOCIAL MEDIA</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/vk__user__deactivated?utm_source=qr&igsh=bjMxdHZ5cXptZ2xx "><img src="images/instagram.png" alt=""width="30px"height="30px"> Instagram</a></li>
+                    <li><a href="https://www.facebook.com/share/16dEUX9jeY/"><img src="images/facebook.png" alt=""width="30px"height="30px"> FaceBook</a></li>
+                    <li><a href="https://www.youtube.com/@venkatesh_vk"><img src="images/youtube.png" alt=""width="30px"height="30px"> YouTube</a></li>
+                    <li><a href=""><img src="images/telegram.png" alt=""width="30px"height="30px"> Telegram</a></li>
+                </ul>          
+          </div>
+    </div>
+     <hr>
+        <p class="copyright">&copy; copyright for these site</p></div>
+<!--togglie mener-->
+<script src="script.js"></script>
+</body>
+</html>

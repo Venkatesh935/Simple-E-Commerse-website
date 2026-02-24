@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Book Concert | VK Sounds</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:Poppins;background:#f5f5f5}
+.form{
+  max-width:500px;
+  margin:50px auto;
+  background:#fff;
+  padding:25px;
+  border-radius:10px;
+}
+input,textarea,button{
+  width:100%;
+  margin:10px 0;
+  padding:10px;
+}
+button{
+  background:green;
+  color:#fff;
+  border:none;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="form">
+<h2>Book Concert / Event</h2>
+
+<input type="text" id="product" readonly>
+<input type="text" placeholder="Your Name">
+<input type="tel" placeholder="Phone Number">
+<input type="text" placeholder="Event Location">
+<input type="date">
+<textarea placeholder="Event Details"></textarea>
+
+<button onclick="submitBooking()">Submit Booking</button>
+</div>
+
+<script>
+let params = new URLSearchParams(window.location.search);
+document.getElementById("product").value =
+  params.get("product");
+
+function submitBooking(){
+  alert("Booking request sent ✅\nWe will contact you soon!");
+}
+</script>
+
+</body>
+</html>
